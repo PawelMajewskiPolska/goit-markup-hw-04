@@ -21,7 +21,6 @@ body {
 }
 .container {
 	margin: 0 auto;
-	/* width: 100%; */
 	max-width: 1200px;
 	padding: 0 15px;
 }
@@ -84,12 +83,16 @@ body {
 	justify-content: space-between;
 }
 
+.icon-envelope {
+	--color2: var(--brand-color2);
+}
+
 .icon-envelope:hover {
-	fill: var(--brand-color1);
+	--color2: var(--brand-color1);
 }
 
 .icon-smartphone:hover {
-	fill: var(--brand-color1);
+	--color4: var(--brand-color1);
 }
 
 .logo {
@@ -275,31 +278,33 @@ body {
 	padding-top: 6px;
 	padding-bottom: 6px;
 	cursor: pointer;
-	border: none;
+	border-color: #f5f4fa;
+	border-radius: 4px;
 }
 .buttonlink:hover {
 	color: var(--brand-color3);
 	background-color: var(--brand-color1);
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 2px 0px 1px rgba(0, 0, 0, 0.1),
+		1px 0px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+.buttonlink:active {
+	color: var(--brand-color3);
+	background-color: #f5f4fa;
+	color: var(--brand-color1);
+	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 2px 0px 1px rgba(0, 0, 0, 0.1),
+		1px 0px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
 }
 
 .button:not(:last-child) {
 	padding-right: 8px;
 }
 
-/* /* .first { */
-/* width: 121px; */ /* tutaj mogła być chyba być pseudoklasa nth-child(4n+1) ale nie chce działać i nie mam pojęcia dlaczego.
-	Testowałem różne listy i działało. W tym zadaniu nie wychodzi... */
-/* margin-left: 310px;
-	background-color: var(--brand-color1);
-	border-color: var(--brand-color1);
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-		0px 2px 2px rgba(0, 0, 0, 0.12);
-	border-radius: 4px;
-	color: var(--brand-color3);
-} */
-
 .colorbutton:hover {
-	background-color: white;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.15), 0px 4px rgba(0, 0, 0, 0.15),
+		0px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
 }
 .footer-background {
 	background-color: var(--brand-color4);
@@ -309,7 +314,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: var(--brand-color4);
+	background-image: linear-gradient(
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url("/images/header.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+
 	color: var(--brand-color3);
 	padding-bottom: 200px;
 }
@@ -335,8 +347,6 @@ body {
 }
 .customers {
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
 	list-style: none;
 	gap: 30px;
 	margin-top: 0;
@@ -403,6 +413,7 @@ body {
 }
 .footeraddress {
 	padding-bottom: 60px;
+	margin: 0;
 }
 .contactusfooter {
 	list-style: none;
@@ -436,42 +447,47 @@ body {
 	border-top: none;
 	width: 370px;
 }
-.gap {
+/* .gap {
 	flex-basis: calc((100% - 60px) / 3);
+	
+} */
+.gap:hover {
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+		0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .sociallinks {
-	list-style: none;
 	display: flex;
-	justify-content: center;
+	list-style: none;
 	gap: 10px;
-	padding-bottom: 30px;
+	padding-bottom: 12px;
+	margin-bottom: 18px;
+	margin-left: 32px;
+	margin-right: 32px;
 }
 
 .icon-instagram2,
 .icon-twitter1,
 .icon-facebook1,
 .icon-linkedin1 {
-	margin-top: 11px;
-	fill: #afb1b8; /* dodać do var */
+	fill: #afb1b8;
 }
 
 .icon-instagram2:hover,
 .icon-twitter1:hover,
 .icon-facebook1:hover,
 .icon-linkedin1:hover {
-	margin-top: 11px;
-	fill: #ffffff; /* dodać do var */
+	--color1: var(--brand-color3);
+	background-color: var(--brand-color1);
+	border-radius: 50%;
 }
 
 .icon-antenna1,
 .icon-clock1,
 .icon-diagram1,
 .icon-astronaut1 {
-	margin: 25px 102.34px;
-}
-.iconbackground {
-	background-color: #f5f4fa; /* dodać do var */
+	background-color: #f5f4fa;
+	border-radius: 4px;
 }
 
 .icon-logo,
@@ -481,8 +497,9 @@ body {
 .icon-logo4,
 .icon-logo5,
 .icon-log6 {
-	margin: 16px 32px;
-	fill: #afb1b8; /* dodać do var */
+	fill: #afb1b8;
+	border: 1px solid #afb1b8; /* dodać do var */
+	border-radius: 4px;
 }
 
 .customerborder {
@@ -490,23 +507,42 @@ body {
 	border-radius: 4px;
 }
 
-.test {
+.footerdetails {
 	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	list-style: none;
-	gap: 10px;
-	padding-bottom: 30px;
-	margin-left: 32px;
-	margin-right: 32px;
+	justify-content: flex-start;
 }
-.testborder {
-	display: block;
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
+.footersociallinks {
+	padding-top: 72px;
+	padding-bottom: 100px;
+	margin-left: 70px;
 }
 
-.testborder:hover {
-	background-color: #2196f3;
+.joinus {
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	line-height: 1, 17;
+	text-transform: uppercase;
+}
+.sociallinks2 {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding-top: 20px;
+}
+
+.footer-icon-instagram2,
+.footer-icon-twitter1,
+.footer-icon-facebook1,
+.footer-icon-linkedin1 {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+}
+.footer-icon-instagram2:hover,
+.footer-icon-twitter1:hover,
+.footer-icon-facebook1:hover,
+.footer-icon-linkedin1:hover {
+	--color1: var(--brand-color3);
+	background-color: var(--brand-color1);
 }
