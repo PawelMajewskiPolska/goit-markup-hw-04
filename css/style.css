@@ -33,9 +33,7 @@ body {
 	margin-right: 0;
 	padding-left: 0;
 }
-.active-color {
-	color: var(--brand-color1);
-}
+
 .buttonlink {
 	font-weight: 500;
 	line-height: 1.63;
@@ -62,6 +60,9 @@ body {
 	box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.1), 2px 0px 1px rgba(0, 0, 0, 0.1),
 		1px 0px 3px rgba(0, 0, 0, 0.1);
 	border-radius: 4px;
+}
+.callus:hover .icon-smartphone {
+	--color4: var(--brand-color1);
 }
 
 .button:not(:last-child) {
@@ -103,6 +104,7 @@ body {
 .contactus {
 	padding: 0;
 	display: flex;
+	/* align-items: center; */
 	list-style: none;
 	justify-content: space-between;
 }
@@ -123,9 +125,33 @@ body {
 	border: 1px solid var(--brand-color8); /* dodać do var */
 	border-radius: 4px;
 }
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+.customerslink:hover .icon-logo5 {
+	--color1: var(--brand-color1);
+	border: 1px solid var(--brand-color1);
+}
+.customerslink:hover .icon-logo4 {
+	--color1: var(--brand-color1);
+	border: 1px solid var(--brand-color1);
+}
+.customerslink:hover .icon-logo3 {
+	border: 1px solid var(--brand-color1);
+}
+.customerslink:hover .icon-logo2 {
+	--color1: var(--brand-color1);
+	border: 1px solid var(--brand-color1);
+}
+.customerslink:hover .icon-logo1 {
+	--color1: var(--brand-color1);
+	border: 1px solid var(--brand-color1);
+}
+.customerslink:hover .icon-logo {
+	--color1: var(--brand-color1);
+	border: 1px solid var(--brand-color1);
+}
+.envelope svg {
+	position: relative;
+	top: 2px;
+	right: 10px;
 }
 .fontsize-link {
 	font-size: 14px;
@@ -197,8 +223,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 24px;
+	padding-bottom: 24px;
 }
 .icon-envelope {
 	--color2: var(--brand-color2);
@@ -206,6 +232,30 @@ body {
 
 .icon-envelope:hover {
 	--color2: var(--brand-color1);
+}
+.mailto:hover .icon-envelope {
+	--color2: var(--brand-color1);
+}
+
+.icon-logo5 {
+	--color1: var(--brand-color8);
+}
+
+.icon-logo4 {
+	--color1: var(--brand-color8);
+}
+.icon-logo2 {
+	--color1: var(--brand-color8);
+}
+.icon-logo1 {
+	--color1: var(--brand-color8);
+}
+.icon-logo {
+	--color1: var(--brand-color8);
+}
+
+.icon-smartphone {
+	--color4: var(--brand-color2);
 }
 
 .icon-smartphone:hover {
@@ -337,6 +387,9 @@ body {
 	color: var(--brand-color2);
 	text-decoration: none;
 }
+.link-active-color {
+	color: var(--brand-color1);
+}
 .link:focus,
 .link:hover,
 .fontsize-link2:focus,
@@ -351,7 +404,7 @@ body {
 			rgba(47, 48, 58, 0.4),
 			rgba(47, 48, 58, 0.4)
 		),
-		url("images/header.jpg");
+		url("./../images/header.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 
@@ -418,6 +471,10 @@ body {
 .pointer {
 	cursor: pointer;
 }
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
 .section1 {
 	background-color: rgba(245, 244, 250, 1);
 	padding-top: 94px;
@@ -441,6 +498,11 @@ body {
 	color: var(--brand-color5);
 	margin-bottom: 0;
 	margin-top: 30px;
+}
+.smartphone svg {
+	position: relative;
+	top: 2px;
+	right: 10px;
 }
 
 .studio-logo {
